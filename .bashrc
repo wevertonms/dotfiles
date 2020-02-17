@@ -1,1 +1,0 @@
-/home/weverton/.dotfiles/bashrc
