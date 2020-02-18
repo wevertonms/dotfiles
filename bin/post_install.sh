@@ -4,7 +4,7 @@ case $DIST in
 "manjaro"|"arch")
     sudo pacman-mirrors -g
     sudo pacman -S yay yakuake firefox ttf-fira-code refind-efi papirus-icon-theme filelight inkscape gimp vlc filelight meld mlocate
-    yay -S codium dropbox sublime-text mailspring neovim
+    yay -S codium dropbox sublime-text mailspring neovim meld
     # Repositório Manjariando
     sudo pacman -U
     https://gitlab.com/manjariando/unsigned-packages/raw/master/repo-manjariando/x86
@@ -13,7 +13,7 @@ case $DIST in
 "ubuntu"|"neon")
     sudo apt update && sudo apt upgrade -y
     sudo add-apt-repository ppa:fish-shell/release-3 -y
-    sudo apt install yakuake fish git libnotify-bin neovim -y
+    sudo apt install yakuake fish git libnotify-bin neovim meld -y
 ;;
 *)
     echo "Distro $DIST not found :/"
@@ -21,6 +21,7 @@ esac
 
 git config --global user.email "wevertonms@gmail.com"
 git config --global user.name "Weverton Marques"
+git config --global credential.helper cache
 
 # Mudança do shell padrão
 chsh -s $(which fish)
