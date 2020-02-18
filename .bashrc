@@ -127,4 +127,8 @@ alias aptse='apt search'
 # Python
 alias pipin='python3 -m  pip install --user -U'
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
+
+function mcd () {
+    mkdir $1 && cd $1
+}
