@@ -26,3 +26,4 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 source /etc/profile.d/apps-bin-path.sh
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
