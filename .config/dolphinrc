@@ -28,7 +28,9 @@ MaximumTextLines=3
 
 [KPropertiesDialog]
 Height 900=455
+Height 960=532
 Width 1600=403
+Width 1707=438
 
 [MainWindow]
 Height 1080=500
