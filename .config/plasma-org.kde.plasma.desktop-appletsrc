@@ -52,7 +52,7 @@ plugin=org.kde.plasma.icontasks
 PreloadWeight=42
 
 [Containments][2][Applets][21][Configuration][General]
-launchers=applications:org.kde.dolphin.desktop,applications:firefox.desktop
+launchers=applications:org.kde.dolphin.desktop,applications:firefox.desktop,applications:telegramdesktop.desktop,applications:org.kde.discover.desktop,file:///snap/mailspring/407/usr/share/mailspring/mailspring?iconData=iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABGIAAARiAE3kcxvAAAKwklEQVRoge2Ye4xc1X3HP-fcO687d-bOzM4-8GtxoOs31NhpjA31JhEb8hBOCJDEUZVGWBGoLm3lRk1LKitgu7QJDjREQqhVShQSiCy7OEJOpQrb2OBSp17FS21DyK5n1_ue2efsPO-9p3_s7Hp2PbPe9aP5J9_R0czo3HN-3-_vd875_e6B3-N3C3GjJuro6IjEYrEtXq93vZTydqABCJW6x4E-13U_LBQKrUNDQ28vX7585EbYvS4Bg4ODIZ9hfMWjadt1TdsihNARAgEUUBSUA4BXaHhLppRSKKVs23HeLjrOT_OZzM9qa2vH_18FDA0NWYFAYJem6zulEFFbKN4rjtNmj_GhnabbyZFWNi4KAInAFDqLNT-36ybr9DBrPSF0JXCVGnZs-4VsNvtsLBYbvekCRkdHvxoIBJ6VUtYPuAXeyPdzIp8iXfL2fGEKjXt9NXzWV0-d9OK6bn82m91lWdYrC5ln3gIuXLgQWtbY-JLHo385rVx-nu3hP3NJnJKXrxUagk_643wpsAhTSIpF-9XOROIbK1eunNeympeAZCa52NRCb2iadmdrcYwX052MuMXrIj4bEenhMXMZ6z1hHMf5ddoZ_2zciHdfbdxVBaRSqaWGGTymafpHDmb6OZDpW5DP1XyMlJF5yGjgQaMex7HbM-mJ5pqamq6rjamKRCIRrauvf1vTtVX_lu7ll9nkjTt3q0AB9wfi_Kl5C47tnB_o79_S2Ng4XO15rVrH7t275X2f-tQBXdc3v5YZ4I1MkskD8uY2geC3xSyOgnW-UK0_EFjn0fVXjx8_XjHwVR06mh79S7_P-P6p_BgvjF6aXgqqbODVfs82tJCxAthpLeFuX5hcPvNXlmk9N28B3d3dy2Lx-LkhnODfpNrJum41nTcVASn5x5qPEEObGEomVy9evLhz9jOy0sCQZe0RUgR_PDZAzlEIJa6pUWrXOj7nKH48NoCUIhiyrD2VuF4Rga6BrtvjVt35D-y8_nSq8gEQ03QadO8C_Tk3Ltl5xpzKyfDva5bSpPvs5OjAqqV1Sz8s79NnP2wZ0ceFFPrh9PCkBytgfCLLzpoY62LxG8Gdk_09_HN2DDyeiv2H08N8M3aLbhnRx4Fd5X0zltDRo0d1KeX2pG1zNpedXgJTTSlBsxGh6PWxt-cibank9ZPv6-G5VB_oXv7YsK6wiRKczWVJ2jZSyu1Hjx6d4fQZAprWNG2SmtbwbnYC5YpStwRV-nbh0Wgd95lRHDPM3p7EdYmYJN-PDJp8JVLHA2Zk0pYqs6skSgnezU4gNa2haU3TpqoCvB7_JxFwNpebPJGnNhSXN6UAdsTqaAlFcEJh9nZ3XpOIk329PJccQAZNtkfifD4cRU3bKLNb-n02lwVR4lhNgKbpG12gPV-oGMpJz4AUgkdjtbSYJRGXLtGWSs2ffG8vzw8OlDwfZ1s4iii9R1S2K2jPF3FLHKsJkFLIFSnbIedyOZRlTZRtaikEj9bEaTEt3FCYffMUMUk-iQiG2B6N83krghCX5xVcaRclybmQsh2kkCvKec8QIDS5KGU7Vb0w-1SSQrAjHue-UBjHDLOvq5u2ZHURk-RTiKDJ9miMbZY1gzxzRAAlSDk2QpOLKgpoaWnxSSGMjOvOMYlkduoQQrAjXlMmoqeiiJM9fTw_MIQ0QmyPxdgWqUCeORynBBlHIYUwWlpafFcI0DRNE0LgKBBKVmzV8oIQgtscB1yBY1rs6-ydIWKKvDBC3On1si0SrkB-KgKVbQslJ7kJgaZp00XotIAjR444jus6XjG3Fyrh_eERXuobwiM0mkMmrmmxL9FHW3Joknz_CJoRwhAaZ0bS_EdXTxXyzChBZjevEDiu6xw5cmQ6ZZcnBccuFkfCmh6fOm0qGZiNVDbHP7X3oswwO-oiNIcNanWdA0qyL9GPIyR6MMRj9REavDp7u1L8aypNxDvApoa6CjamSusrEdYkdrE4AkwLKGfq5vL5rlpdq-oFMSsCBcfhmfMXSQctPh0xaQ4bCCF4qCbEF2tCuEELzQjxWEOUrVaQFQEfT9wSw2OYPN89zLlUhfeUqaVawXatrpHL57uA6fK4XICTHk9fCAio0_XLhMvJlwlQSvHCuQ46fSHuMPz8Sd3ldS2E4OGaEI83RNi1OMZWy5getzHkZ0d9BGWEeaZ9gM6xdBkFUdVuna4TEJAeT1-oGoHe3t7TCljh95RSeHk6n0rxkzjU3s0p10-Dz8cTiyNoszalEILmiMHGkP8KJ38iYvBwPEQ-GOHpC90kM7kZEahkd4XfgwJ6e3tPV4uAOnzw4Juu6zrrg545N_Gv-lK8OmIT9Pr46yURQlqVPTMHHowHaYkajAWjPPVegnShdMtRxe76oAfXdZ3DBw--SdlunGF5__79HalksnV1QCOiaRVfUC6NT_B8YhTNF-TPl4RZ6r-iIp8XhBB8vcHkYyE__YEoe3_dQcFxK77YRDTJ6oBGKpls3b9_f0f5PLNdl2k72_aaBD5ueSqUEpLvvT9A0bD4Un2QDSEf1wMpBDuXhFgd9NHhjfLDc5cqlhEft7xIoO1s22tAZoYjZk_a2Ni4_J1fnT6pG-aiJztypJ3LZ-fUry0RLzuXBqsnowViwnH5zm_H6czaTF0OT8HUBHuX-7Ez6Z7NGz96TyKRmBGBK-KfSCR63zl54sX77r__qQfjHl7uK05POPV9snOQ4-8nbgj5aSLhCMJvzMg1CvhC3INPKt46eeLFRCLRO3tcRRf6_f5bz144_3ptfd0dP7xk8176-u4_rxVrTcGfLdEZ7B84e8fKVdtyudzF2c9UvNiybTtTKNqXtjZvfWBd2OM5Mw4ZB272pVZ5i3slO5fqCLuQ2fv0np3vnjrVStn5P6cAwPmf06cHm1asLNy5bvXWNUEpzoxBwZ26O5v_Z-EjBGFd8heNGhFduYcOHNyz-8knDwDpSkSrXi0CuV-8_nrH5i33mGtuu_WutSEh2sYFOWdhnlzodWTUI3iiUdLgRZ049ta_bH_kkR8A_dVIziUAIP3qK6-cv-fee8zVyxv_cIMlxMWMYLh4c5bNbYZgZ6Mgriv19om3fvTApz_zXSBBWeZdqAAFjP3sJ6-ca1q1Ird2VdPGu2NC90hBe0bgqhtD3CMFn6uDry5WeJSTf_3Qoe9_-YsP_wBop8K6X4gAmFQ_cvjQv_8mM5H5YMOGDevW1PgjH4tA3hX05uU1C9GlYFNUsWOZYm1IMTY8cvEfntrz5Le_9bevARevRh6qFd7Vn62Nx-OrXnr5R1-7e_PmR7xeX3DcEfz3sKB1TNKZEdVjXYIElhmK9WGXP4oqQpqiUMhPnHrnnZ9_42tffzmZTJ4HBqn49nF9AqYQAJauX79-5e59ex6666677jdMs1YAOVfQmZX05wWjxcn_AH6psDxQ71MsC7j4pUIBmXR68MyZM7_8zt99-0Bra-sFoAvILoTMtdYCAjCBRX6_f9Gub33zo1ubP7Fp2a2NayLRaKOu616UEkyVGkqBEMq27cLI8HCi82Lif48fe_O_nn3mu6dzuVwP0MPkMbngjHm9xYwAfEAEqAEsy7LMe5ubG_6g6faasBUNAIyNDmd_88GHqRPHjvWNjo6mgVEgBYwA-WshfqMEzJ5LA7xMitK5fEg4gM0k2ULp_--mPvk9bjD-DzqIxaFLQCcIAAAAAElFTkSuQmCC
 
 [Containments][2][Applets][22]
 immutability=1
@@ -71,12 +71,30 @@ global=Alt+F1
 immutability=1
 plugin=verticaldigitalclockEQ
 
+[Containments][2][Applets][25][Configuration]
+PreloadWeight=60
+
 [Containments][2][Applets][25][Configuration][Appearance]
 showDate=true
 
 [Containments][2][Applets][25][Configuration][ConfigDialog]
 DialogHeight=660
 DialogWidth=880
+
+[Containments][2][Applets][26]
+immutability=1
+plugin=org.kde.plasma.systemmonitor.memory
+
+[Containments][2][Applets][26][Configuration][ConfigDialog]
+DialogHeight=660
+DialogWidth=880
+
+[Containments][2][Applets][26][Configuration][General]
+sources=mem%2Fphysical%2Fapplication,mem%2Fswap%2Fused
+
+[Containments][2][Applets][27]
+immutability=1
+plugin=org.kde.plasma.systemmonitor.cpu
 
 [Containments][2][Applets][4]
 immutability=1
@@ -90,7 +108,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][6][Configuration]
-PreloadWeight=34
+PreloadWeight=84
 SystrayContainmentId=7
 
 [Containments][2][Applets][9]
@@ -108,7 +126,7 @@ DialogWidth=183
 PreloadWeight=34
 
 [Containments][2][General]
-AppletOrder=22;4;21;6;25;9
+AppletOrder=22;4;21;26;27;6;25;9
 
 [Containments][7]
 activityId=
@@ -131,7 +149,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][7][Applets][11][Configuration]
-PreloadWeight=34
+PreloadWeight=39
 
 [Containments][7][Applets][12]
 immutability=1
@@ -187,27 +205,32 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][7][Applets][19][Configuration]
-PreloadWeight=34
+PreloadWeight=39
 
 [Containments][7][Applets][20]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][7][Applets][20][Configuration]
-PreloadWeight=34
+PreloadWeight=49
 
 [Containments][7][Applets][23]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][7][Applets][23][Configuration]
-PreloadWeight=42
+PreloadWeight=7
+
+[Containments][7][ConfigDialog]
+DialogHeight=660
+DialogWidth=880
 
 [Containments][7][Configuration]
 PreloadWeight=34
 
 [Containments][7][General]
-extraItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
+extraItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.battery
+hiddenItems=org.kde.plasma.battery
 knownItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
 
 [ScreenMapping]
