@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=Linux
-Font=Fira Code,13,-1,5,57,0,0,0,0,0,Medium
+ColorScheme=Monokai-Flat
+Font=Fira Code,13,-1,5,50,0,0,0,0,0,Regular
 
 [General]
 Name=Profile 1
