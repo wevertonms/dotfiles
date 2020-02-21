@@ -35,6 +35,11 @@ CommandWindow2=Activate and pass click
 CommandWindow3=Activate and pass click
 CommandWindowWheel=Scroll
 
+[NightColor]
+Active=true
+LatitudeAuto=-9.5713
+LongitudeAuto=-35.6899
+
 [Plugins]
 blurEnabled=true
 forceblurEnabled=true
