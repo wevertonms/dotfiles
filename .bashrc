@@ -132,3 +132,7 @@ export PATH="$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
 function mcd () {
     mkdir $1 && cd $1
 }
+
+source /etc/profile.d/apps-bin-path.sh
+
+eval "$(starship init bash)"

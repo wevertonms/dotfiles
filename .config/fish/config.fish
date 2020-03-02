@@ -6,7 +6,8 @@ set -x JAVA_HOME /usr/lib/jvm/default
 #set -x PATH $PATH $ANDROID_HOME/tools/bin
 #set -x PATH $PATH $ANDROID_HOME/platform-tools
 set -g theme_display_virtualenv no  # Disables displaying the current virtualenv name
-set -g XDG_DATA_DIRS $XDG_DATA_DIRS /var/lib/snapd/desktop/
+
+set XDG_DATA_DIRS (echo $XDG_DATA_DIRS | tr : ' ') /var/lib/snapd/deskto
 
 alias dotfiles '/usr/bin/git --git-dir=/home/weverton/.dotfiles/ --work-tree=/home/weverton'
 alias ll 'ls -alF'
