@@ -5,3 +5,4 @@ oh-my-fish/plugin-brew
 laughedelic/brew-completions
 jethrokuan/z
 edc/bass
+fishpkg/fish-humanize-duration
