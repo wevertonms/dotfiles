@@ -7,10 +7,10 @@ set -x JAVA_HOME /usr/lib/jvm/default
 #set -x PATH $PATH $ANDROID_HOME/platform-tools
 set -g theme_display_virtualenv no  # Disables displaying the current virtualenv name
 
-set XDG_DATA_DIRS (echo $XDG_DATA_DIRS | tr : ' ') /var/lib/snapd/deskto
+# set XDG_DATA_DIRS (echo $XDG_DATA_DIRS | tr : ' ')
 
 alias dotfiles '/usr/bin/git --git-dir=/home/weverton/.dotfiles/ --work-tree=/home/weverton'
-alias ll 'ls -alF'
+alias ll 'ls -alhF'
 alias la 'ls -A'
 alias l 'ls -CF'
 alias aptin 'sudo apt install'
@@ -18,3 +18,5 @@ alias aptup 'sudo apt update'
 alias aptar 'sudo apt autoremove'
 alias aptse 'apt search'
 alias pipin 'python3 -m  pip install --user -U'
+
+bass source /etc/profile 
