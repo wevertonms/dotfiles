@@ -20,3 +20,7 @@ alias aptse 'apt search'
 alias pipin 'python3 -m  pip install --user -U'
 
 bass source /etc/profile 
+
+function fish_greeting
+   neofetch
+end
