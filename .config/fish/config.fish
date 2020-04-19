@@ -2,7 +2,12 @@ set -x PATH ~/.local/bin/ $PATH
 set -x PYENV_ROOT "$HOME/.pyenv"
 set -x PATH $HOME/bin $PATH
 set -x PATH $PYENV_ROOT/bin $PATH
+set -x EDITOR nvim
 set -x JAVA_HOME /usr/lib/jvm/default
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+
+set -x METBASE_VM_IP 35.247.245.255
+set -x MOZ_DISABLE_GMP_SANDBOX 1
 #set -x ANDROID_HOME ~/Android/Sdk/
 set -x QT_QPA_PLATFORMTHEME qt5ct
 #set -x PATH $PATH $ANDROID_HOME/emulator
@@ -13,10 +18,14 @@ set -g theme_display_virtualenv no  # Disables displaying the current virtualenv
 
 # set XDG_DATA_DIRS (echo $XDG_DATA_DIRS | tr : ' ')
 
+# Rust settings
+set -x PATH $HOME/.cargo/bin $PATH
+
 alias dotfiles '/usr/bin/git --git-dir /home/weverton/.dotfiles/ --work-tree /home/weverton'
-alias ll 'ls -alhF'
-alias la 'ls -A'
-alias l 'ls -CF'
+alias l 'lsd'
+alias ls 'lsd'
+alias ll 'lsd -alhF'
+alias la 'lsd -A'
 # Package manager
 alias aptin 'sudo apt install'
 alias aptup 'sudo apt update'
@@ -40,8 +49,7 @@ end
 # eval /usr/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
-eval (direnv hook fish)
-starship init fish | source
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/weverton/google-cloud-sdk/path.fish.inc' ]; . '/home/weverton/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/data/Downloads/Compressed/google-cloud-sdk-280.0.0-linux-x86_64/google-cloud-sdk/path.fish.inc' ]; . '/data/Downloads/Compressed/google-cloud-sdk-280.0.0-linux-x86_64/google-cloud-sdk/path.fish.inc'; end
+
+starship init fish | source
