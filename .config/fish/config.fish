@@ -38,6 +38,11 @@ alias dnfup 'sudo dnf update -y'
 
 alias v nvim
 
+
+function mcd
+    mkdir -p $argv; and cd $argv
+end
+
 # bass source /etc/profile
 
 if command -v pyenv 1>/dev/null 2>&1                                                                          │
