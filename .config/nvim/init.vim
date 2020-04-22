@@ -5,8 +5,8 @@ filetype plugin indent on
 syntax enable
 
 set number relativenumber
-set mouse=a
-set inccommand=split
+set mouse=a " Add mouse support
+set inccommand=split " Show a split for incremental search/replace
 set confirm " Ask for confirmation before leave
 set title " Set the window title the vim name
 set cursorline " Highlights the current line
@@ -24,19 +24,36 @@ set backspace=indent,eol,start
 set splitbelow
 set splitright
 
+" set spell
+set spelllang=en_us,pt_br
+" Enable folding
+" set foldmethod=indent
+" set foldlevel=99
+autocmd FileType python set colorcolumn=89 " Ruler
+
+
+
 call plug#begin('~/.config/nvim/plugged')
+Plug 'gko/vim-coloresque'
+Plug 'honza/vim-snippets'
+Plug 'sirver/ultisnips'
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branche': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tomasr/molokai'
+Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
     let g:airline_powerline_fonts = 1 " Powerline style
-    let g:airline_theme='powerlineish'
+    let g:airline_theme='codedark'
 Plug 'vim-airline/vim-airline-themes'
     "let g:airline_theme='powerlinish'
     let g:airline#extensions#tabline#enabled = 1 " Show tabs for buffers
 " Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
-    " let g:polyglot_disabled = ['latex']
+    let g:polyglot_disabled = ['latex']
 Plug 'ctrlpvim/ctrlp.vim'
     map <c-t> :CtrlPTag<cr>
     let g:ctrlp_working_path_mode = 'ra' " List files in the current directoru
@@ -47,13 +64,10 @@ Plug 'ctrlpvim/ctrlp.vim'
       \ 'file': '\v\.(exe|so|dll|pyc|aux|ipynb|ilg|log)$',
       \ 'link': 'some_bad_symbolic_links',
       \ }
-" Plug 'tacahiroy/ctrlp-funky'
-" Plug 'junegunn/fzf', { 'do': './install --bin' }
-" Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
+    let g:vimtex_compiler_progname = 'nvr'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'mhinz/vim-startify'
-" Plug 'Valloric/YouCompleteMe'
 Plug 'nvie/vim-flake8'
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
@@ -63,41 +77,26 @@ Plug 'tpope/vim-fugitive'
 Plug 'atsepkov/vim-pydocstring'
     let g:pydocstring_formatter = 'google'
     let g:pydocstring_doq_path='/home/weverton/.local/bin/doq'
-Plug 'akiyosi/gonvim-fuzzy'       " Vim plug
-" Plug 'vim-syntastic/syntastic'
-"     set statusline+=%#warningmsg#
-"     set statusline+=%{SyntasticStatuslineFlag()}
-"     set statusline+=%*
-"
-"     let g:syntastic_always_populate_loc_list = 1
-"     let g:syntastic_auto_loc_list = 1
-"     let g:syntastic_check_on_open = 1
-"     let g:syntastic_check_on_wq = 0
-"     let g:syntastic_python_checkers = ['flake8']
 " Julia ============================================================
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+" Plug 'JuliaEditorSupport/julia-vim'
+" Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+" Plug 'ncm2/ncm2'
+" Plug 'roxma/nvim-yarp'
 
 call plug#end()
 
 
-colorscheme molokai
+let g:rehash256 = 1
 set background=dark
-" Enable folding
-" set foldmethod=indent
-" set foldlevel=99
-set colorcolumn=89 " Ruler
-
+colorscheme molokai
 let python_highlight_all=1
-let g:ctrlp_funky_syntax_highlight = 1
 
 nnoremap <leader>, :tabnew ~/.config/nvim/init.vim<cr>:source ~/.config/nvim/init.vim<cr>
 map <leader>r :%s///g<Left><Left><Left>
 map <leader>a ggVG
 nnoremap <leader>n :bnext<cr>
 nnoremap <leader>p :bprevious<cr>
+nnoremap <leader>/ :Commentary<cr>
 map j gj
 map k gk
 nnoremap <c-q> :bdelete<cr>
@@ -114,9 +113,10 @@ nnoremap <c-h> <c-w><c-h>
 " Remove trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * :Format
+autocmd BufWritePre *.py :CocCommand python.sortImport<cr>
 
 set switchbuf=usetab " Open new files in tabs
-set showtabline=2 " tabs allways visible
+" set showtabline=2 " tabs allways visible
 
 set clipboard=unnamedplus
 
@@ -272,7 +272,7 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<clsr
 " Find symbol of current document.
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
