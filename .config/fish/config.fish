@@ -1,10 +1,14 @@
+bind \cf 'fzf'
+
+
+
 set -x PATH ~/.local/bin/ $PATH
 set -x PYENV_ROOT "$HOME/.pyenv"
 set -x PATH $HOME/bin $PATH
 set -x PATH $PYENV_ROOT/bin $PATH
 set -x EDITOR nvim
 set -x JAVA_HOME /usr/lib/jvm/default
-set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+set -x FZF_DEFAULT_COMMAND 'rg --files --smart-case --glob "!.git/*"'
 
 set -x METBASE_VM_IP 35.247.245.255
 set -x MOZ_DISABLE_GMP_SANDBOX 1

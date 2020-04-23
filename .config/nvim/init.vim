@@ -13,7 +13,7 @@ set cursorline " Highlights the current line
 " Search settings
 set incsearch
 set ignorecase smartcase
-set nohlsearch
+"set nohlsearch
 " Tab/indent configuration
 set expandtab
 set shiftwidth=4
@@ -32,8 +32,15 @@ set spelllang=en_us,pt_br
 autocmd FileType python set colorcolumn=89 " Ruler
 
 
+" Install vim-plug if not already installed
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'romainl/vim-cool' " Awesome search highlighting
 Plug 'gko/vim-coloresque'
 Plug 'honza/vim-snippets'
 Plug 'sirver/ultisnips'
@@ -89,6 +96,8 @@ call plug#end()
 let g:rehash256 = 1
 set background=dark
 colorscheme molokai
+" Make background transparent
+hi Normal guibg=NONE ctermbg=NONE
 let python_highlight_all=1
 
 nnoremap <leader>, :tabnew ~/.config/nvim/init.vim<cr>:source ~/.config/nvim/init.vim<cr>
