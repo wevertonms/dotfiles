@@ -40,6 +40,7 @@ endif
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'romainl/vim-cool' " Awesome search highlighting
 Plug 'gko/vim-coloresque'
 Plug 'honza/vim-snippets'

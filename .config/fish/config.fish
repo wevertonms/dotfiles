@@ -25,7 +25,7 @@ set -g theme_display_virtualenv no  # Disables displaying the current virtualenv
 # Rust settings
 set -x PATH $HOME/.cargo/bin $PATH
 
-alias dotfiles '/usr/bin/git --git-dir /home/weverton/.dotfiles/ --work-tree /home/weverton'
+alias dotfiles "git --git-dir $HOME/.dotfiles/ --work-tree $HOME"
 alias l 'lsd'
 alias ls 'lsd'
 alias ll 'lsd -alhF'
