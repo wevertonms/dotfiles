@@ -49,7 +49,7 @@ end
 
 # bass source /etc/profile
 
-if command -v pyenv 1>/dev/null 2>&1                                                                          │
+if command -v pyenv 1>/dev/null 2>&1
     pyenv init - | source
 end
 
@@ -62,3 +62,11 @@ end
 if [ -f '/data/Downloads/Compressed/google-cloud-sdk-280.0.0-linux-x86_64/google-cloud-sdk/path.fish.inc' ]; . '/data/Downloads/Compressed/google-cloud-sdk-280.0.0-linux-x86_64/google-cloud-sdk/path.fish.inc'; end
 
 starship init fish | source
+
+# Install fisher (fish shell plugins manager) when it isn't installed
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
+
