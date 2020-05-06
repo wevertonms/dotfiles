@@ -40,24 +40,24 @@ endif
 
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'JuliaEditorSupport/julia-vim'
-    let g:latex_to_unicode_tab = 0
+" Plug 'JuliaEditorSupport/julia-vim'
+"    let g:latex_to_unicode_tab = 0
 Plug 'dyng/ctrlsf.vim' " Global search-replace
 Plug 'mhinz/vim-startify'              | " Startup screen
 Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'romainl/vim-cool' " Awesome search highlighting
 Plug 'gko/vim-coloresque'
-Plug 'honza/vim-snippets'
-Plug 'sirver/ultisnips'
-    let g:UltiSnipsExpandTrigger="<tab>"
-    let g:UltiSnipsJumpForwardTrigger="<c-b>"
-    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" Plug 'tpope/vim-commentary'
-Plug 'preservim/nerdcommenter'
-    let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
-    let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
-    let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
-    let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not
+" Plug 'honza/vim-snippets'
+" Plug 'sirver/ultisnips'
+"     let g:UltiSnipsExpandTrigger="<tab>"
+"     let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"     let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+Plug 'tpope/vim-commentary'
+" Plug 'preservim/nerdcommenter'
+"     let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
+"     let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
+"     let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
+"     let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not
 Plug 'neoclide/coc.nvim', {'branche': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tomasr/molokai'
@@ -71,16 +71,21 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['latex']
-Plug 'ctrlpvim/ctrlp.vim'
-    " map <c-t> :CtrlPTag<cr>
-    let g:ctrlp_working_path_mode = 'ra' " List files in the current directoru
-    let g:ctrlp_user_command = ['.git', 'cd %s && rg --files-with-matches ".*"', 'find %s -type f']  " Ignore files in .gitignore
-    let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-    let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-      \ 'file': '\v\.(exe|so|dll|pyc|aux|ipynb|ilg|log)$',
-      \ 'link': 'some_bad_symbolic_links',
-      \ }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+    let g:Lf_WindowPosition = 'popup'
+    let g:Lf_PreviewInPopup = 1
+" Plug 'ctrlpvim/ctrlp.vim'
+"     " map <c-t> :CtrlPTag<cr>
+"     let g:ctrlp_working_path_mode = 'ra' " List files in the current directoru
+"     let g:ctrlp_user_command = ['.git', 'cd %s && rg --files-with-matches ".*"', 'find %s -type f']  " Ignore files in .gitignore
+"     let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"     let g:ctrlp_custom_ignore = {
+"       \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"       \ 'file': '\v\.(exe|so|dll|pyc|aux|ipynb|ilg|log)$',
+"       \ 'link': 'some_bad_symbolic_links',
+"       \ }
 Plug 'lervag/vimtex'
     let g:tex_flavor = 'latex'
     let g:vimtex_compiler_progname = 'nvr'
@@ -117,6 +122,7 @@ map <leader>a ggVG
 nnoremap <leader>n :bnext<cr>
 nnoremap <leader>p :bprevious<cr>
 nnoremap <leader>/ :Commentary<cr>
+nnoremap <c-p> :Files<cr>
 map j gj
 map k gk
 nnoremap <c-q> :bdelete<cr>
@@ -295,7 +301,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
