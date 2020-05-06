@@ -62,7 +62,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['latex']
 Plug 'ctrlpvim/ctrlp.vim'
-    map <c-t> :CtrlPTag<cr>
+    " map <c-t> :CtrlPTag<cr>
     let g:ctrlp_working_path_mode = 'ra' " List files in the current directoru
     let g:ctrlp_user_command = ['.git', 'cd %s && rg --files-with-matches ".*"', 'find %s -type f']  " Ignore files in .gitignore
     let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'

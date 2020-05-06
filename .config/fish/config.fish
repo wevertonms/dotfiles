@@ -1,19 +1,20 @@
 bind \cf 'fzf'
 
-
-
 set -x PATH ~/.local/bin/ $PATH
-set -x PYENV_ROOT "$HOME/.pyenv"
 set -x PATH $HOME/bin $PATH
-set -x PATH $PYENV_ROOT/bin $PATH
+# set -x PYENV_ROOT "$HOME/.pyenv"
+# set -x PATH $PYENV_ROOT/bin $PATH
+# set -x XDG_DATA_HOME $HOME/.local/share
+# set -x XDG_CONFIG_HOME $HOME/.config $XDG_CONFIG_HOME
+# set -x XDG_DATA_DIRS $HOME/.loca/share /usr/local/share/ /usr/share/
 set -x EDITOR nvim
 set -x JAVA_HOME /usr/lib/jvm/default
-set -x FZF_DEFAULT_COMMAND 'rg --files --smart-case --glob "!.git/*"'
+# set -x FZF_DEFAULT_COMMAND 'rg --files --smart-case --glob "!.git/*"'
 
 set -x METBASE_VM_IP 35.247.245.255
 set -x MOZ_DISABLE_GMP_SANDBOX 1
-#set -x ANDROID_HOME ~/Android/Sdk/
 set -x QT_QPA_PLATFORMTHEME qt5ct
+#set -x ANDROID_HOME ~/Android/Sdk/
 #set -x PATH $PATH $ANDROID_HOME/emulator
 #set -x PATH $PATH $ANDROID_HOME/tools
 #set -x PATH $PATH $ANDROID_HOME/tools/bin
