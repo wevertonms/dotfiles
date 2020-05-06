@@ -13,7 +13,7 @@ set cursorline " Highlights the current line
 " Search settings
 set incsearch
 set ignorecase smartcase
-"set nohlsearch
+set nohlsearch
 " Tab/indent configuration
 set expandtab
 set shiftwidth=4
@@ -24,7 +24,7 @@ set backspace=indent,eol,start
 set splitbelow
 set splitright
 
-" set spell
+autocmd FileType tex set spell
 set spelllang=en_us,pt_br
 " Enable folding
 " set foldmethod=indent
@@ -32,7 +32,7 @@ set spelllang=en_us,pt_br
 autocmd FileType python set colorcolumn=89 " Ruler
 
 
-" Install vim-plug if not already installed
+" Install vim-plug if it is not already installed
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -40,6 +40,11 @@ endif
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'JuliaEditorSupport/julia-vim'
+    let g:latex_to_unicode_tab = 0
+Plug 'dyng/ctrlsf.vim' " Global search-replace
+Plug 'mhinz/vim-startify'              | " Startup screen
+Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'romainl/vim-cool' " Awesome search highlighting
 Plug 'gko/vim-coloresque'
 Plug 'honza/vim-snippets'
@@ -47,7 +52,12 @@ Plug 'sirver/ultisnips'
     let g:UltiSnipsExpandTrigger="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<c-b>"
     let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
+    let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
+    let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
+    let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
+    let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not
 Plug 'neoclide/coc.nvim', {'branche': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tomasr/molokai'
@@ -72,14 +82,15 @@ Plug 'ctrlpvim/ctrlp.vim'
       \ 'link': 'some_bad_symbolic_links',
       \ }
 Plug 'lervag/vimtex'
+    let g:tex_flavor = 'latex'
     let g:vimtex_compiler_progname = 'nvr'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'mhinz/vim-startify'
-Plug 'nvie/vim-flake8'
+" Plug 'nvie/vim-flake8'
 Plug 'ryanoasis/vim-devicons'
-Plug 'preservim/nerdtree'
-    map <c-s-e> :NERDTreeToggle<cr>
-    let NERDTreeWinPos = "right"
+" Plug 'prescrvim/nerdtree'
+    " map <c-e> :NERDTreeToggle<cr>
+    " let NERDTreeWinPos = "right"
 Plug 'tpope/vim-fugitive'
 Plug 'atsepkov/vim-pydocstring'
     let g:pydocstring_formatter = 'google'
@@ -118,16 +129,23 @@ nnoremap <c-l> <c-w><c-l>
 nnoremap <c-h> <c-w><c-h>
 
 " Remove trailing whitespaces on save
-" autocmd BufWritePre *.py !black %
-" Remove trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * :Format
 autocmd BufWritePre *.py :CocCommand python.sortImport<cr>
+autocmd FileType tex let b:vimtex_main = 'main.tex'
 
 set switchbuf=usetab " Open new files in tabs
 " set showtabline=2 " tabs allways visible
 
 set clipboard=unnamedplus
+
+
+" Aerojump ===================================================================
+" Create mappings (with leader)
+nmap <Leader>as <Plug>(AerojumpSpace)
+nmap <Leader>ab <Plug>(AerojumpBolt)
+nmap <Leader>aa <Plug>(AerojumpFromCursorBolt)
+nmap <Leader>ad <Plug>(AerojumpDefault) " Boring mode
 
 " ============================================================
 " COC SETTINGS
