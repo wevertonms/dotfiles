@@ -1,6 +1,6 @@
 bind \cf 'fzf'
 
-set -x PATH ~/.local/bin/ $PATH
+set -x PATH ~/.miniconda3/bin ~/.local/bin/ $PATH
 set -x PATH $HOME/bin $PATH
 # set -x PYENV_ROOT "$HOME/.pyenv"
 # set -x PATH $PYENV_ROOT/bin $PATH
@@ -28,7 +28,7 @@ set -x PATH $HOME/.cargo/bin $PATH
 
 alias dotfiles "git --git-dir $HOME/.dotfiles/ --work-tree $HOME"
 alias l 'lsd'
-alias ls 'lsd'
+alias ls 'ls'
 alias ll 'lsd -alhF'
 alias la 'lsd -A'
 # Package manager
@@ -56,7 +56,7 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# eval /usr/bin/conda "shell.fish" "hook" $argv | source
+eval /home/wms/.miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 # The next line updates PATH for the Google Cloud SDK.
