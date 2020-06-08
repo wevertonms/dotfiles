@@ -17,6 +17,7 @@ set nohlsearch
 " Tab/indent configuration
 set expandtab
 set shiftwidth=4
+set softtabstop=4
 set tabstop=4
 set autoindent
 set backspace=indent,eol,start
@@ -73,9 +74,9 @@ Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['latex']
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-    let g:Lf_WindowPosition = 'popup'
-    let g:Lf_PreviewInPopup = 1
+" Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+"     let g:Lf_WindowPosition = 'popup'
+"     let g:Lf_PreviewInPopup = 1
 " Plug 'ctrlpvim/ctrlp.vim'
 "     " map <c-t> :CtrlPTag<cr>
 "     let g:ctrlp_working_path_mode = 'ra' " List files in the current directoru
@@ -99,12 +100,18 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'atsepkov/vim-pydocstring'
     let g:pydocstring_formatter = 'google'
-    let g:pydocstring_doq_path='/home/weverton/.local/bin/doq'
+    let g:pydocstring_doq_path='~/.local/bin/doq'
 " Julia ============================================================
 " Plug 'JuliaEditorSupport/julia-vim'
 " Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 " Plug 'ncm2/ncm2'
 " Plug 'roxma/nvim-yarp'
+Plug 'liuchengxu/vim-which-key'
+" To register the descriptions when using the on-demand load feature,
+" use the autocmd hook to call which_key#register(), e.g., register for the Space key:
+    autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
+    nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 
@@ -113,7 +120,7 @@ let g:rehash256 = 1
 set background=dark
 colorscheme molokai
 " Make background transparent
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 let python_highlight_all=1
 
 nnoremap <leader>, :tabnew ~/.config/nvim/init.vim<cr>:source ~/.config/nvim/init.vim<cr>
