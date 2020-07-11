@@ -1,6 +1,4 @@
-bind \cf 'fzf'
-
-set -x PATH ~/.miniconda3/bin ~/.local/bin/ $PATH
+set -x PATH  ~/.local/bin/ $PATH
 set -x PATH $HOME/bin $PATH
 # set -x PYENV_ROOT "$HOME/.pyenv"
 # set -x PATH $PYENV_ROOT/bin $PATH
@@ -56,11 +54,8 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /home/wms/.miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# eval /home/wms/.miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/data/Downloads/Compressed/google-cloud-sdk-280.0.0-linux-x86_64/google-cloud-sdk/path.fish.inc' ]; . '/data/Downloads/Compressed/google-cloud-sdk-280.0.0-linux-x86_64/google-cloud-sdk/path.fish.inc'; end
 
 starship init fish | source
 

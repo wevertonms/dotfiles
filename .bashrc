@@ -128,7 +128,7 @@ ex ()
   fi
 }
 
-source ~/.aliases
+# source ~/.aliases
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
