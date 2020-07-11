@@ -3,6 +3,8 @@ set nocompatible " Make it doesn't worry about retro-compatibility with Vim
 let mapleader=" " " Space bar
 filetype plugin indent on
 syntax enable
+set guifont=Fira\ Code\ 11
+set encoding=utf8
 
 set number relativenumber
 set mouse=a " Add mouse support

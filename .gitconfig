@@ -1,5 +1,29 @@
 [user]
 	email = wevertonms@gmail.com
 	name = Weverton Marques
+
 [credential]
 	helper = cache
+
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+  ui     = true
+
+[core]
+  excludesfile = ~/.gitignore
+  editor       = nvim
+  whitespace   = cr-at-eol
+
+[apply]
+  whitespace = nowarn
+
+[help]
+  autocorrect = 1
+
+[pull]
+  default = current
+
+[push]
+  default = current
