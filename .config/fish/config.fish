@@ -1,5 +1,7 @@
 set -x PATH  ~/.local/bin/ $PATH
 set -x PATH $HOME/bin $PATH
+set -x PATH $HOME/.config/npm/bin $PATH
+set -x PATH $HOME/.gem/ruby/2.7.0/bin $PATH
 # set -x PYENV_ROOT "$HOME/.pyenv"
 # set -x PATH $PYENV_ROOT/bin $PATH
 # set -x XDG_DATA_HOME $HOME/.local/share
@@ -12,11 +14,12 @@ set -x JAVA_HOME /usr/lib/jvm/default
 set -x METBASE_VM_IP 35.247.245.255
 set -x MOZ_DISABLE_GMP_SANDBOX 1
 set -x QT_QPA_PLATFORMTHEME qt5ct
-#set -x ANDROID_HOME ~/Android/Sdk/
-#set -x PATH $PATH $ANDROID_HOME/emulator
-#set -x PATH $PATH $ANDROID_HOME/tools
-#set -x PATH $PATH $ANDROID_HOME/tools/bin
-#set -x PATH $PATH $ANDROID_HOME/platform-tools
+set -x ANDROID_SDK ~/Android/Sdk/
+set -x PATH $PATH $ANDROID_SDK/emulator
+set -x PATH $PATH $ANDROID_SDK/tools
+set -x PATH $PATH $ANDROID_SDK/tools/bin
+set -x PATH $PATH $ANDROID_SDK/platform-tools
+
 set -g theme_display_virtualenv no  # Disables displaying the current virtualenv name
 
 # set XDG_DATA_DIRS (echo $XDG_DATA_DIRS | tr : ' ')
@@ -41,6 +44,10 @@ alias dnfup 'sudo dnf update -y'
 
 alias v nvim
 
+abbr setclip "xclip -selection c"
+abbr getclip "xclip -selection c -o"
+
+alias timestamp 'date +%FT%T%:z | setclip'
 
 function mcd
     mkdir -p $argv; and cd $argv
@@ -66,3 +73,5 @@ if not functions -q fisher
     fish -c fisher
 end
 
+# eval (direnv hook fish)
+# set -x DJANGO_SETTINGS_MODULE 'backend.settings'

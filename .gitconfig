@@ -1,9 +1,9 @@
 [user]
-	email = wevertonms@gmail.com
-	name = Weverton Marques
+  email = wevertonms@gmail.com
+  name = Weverton Marques
 
 [credential]
-	helper = cache
+  helper = store
 
 [color]
   diff   = auto
@@ -15,6 +15,7 @@
   excludesfile = ~/.gitignore
   editor       = nvim
   whitespace   = cr-at-eol
+  pager        = delta
 
 [apply]
   whitespace = nowarn
@@ -27,3 +28,18 @@
 
 [push]
   default = current
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  line-numbers = true
+  side-by-side = true
+  line-numbers-left-format = ""
+  line-numbers-right-format = "│ "
+  syntax-theme = Monokai Extended
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

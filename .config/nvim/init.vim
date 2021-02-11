@@ -43,11 +43,9 @@ endif
 
 
 call plug#begin('~/.config/nvim/plugged')
-" Plug 'JuliaEditorSupport/julia-vim'
-"    let g:latex_to_unicode_tab = 0
 Plug 'dyng/ctrlsf.vim' " Global search-replace
 Plug 'mhinz/vim-startify'              | " Startup screen
-Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'romainl/vim-cool' " Awesome search highlighting
 Plug 'gko/vim-coloresque'
 " Plug 'honza/vim-snippets'
@@ -61,7 +59,8 @@ Plug 'tpope/vim-commentary'
 "     let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
 "     let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
 "     let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not
-Plug 'neoclide/coc.nvim', {'branche': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tomasr/molokai'
 Plug 'tomasiser/vim-code-dark'
@@ -93,7 +92,6 @@ Plug 'lervag/vimtex'
     let g:tex_flavor = 'latex'
     let g:vimtex_compiler_progname = 'nvr'
 Plug 'jiangmiao/auto-pairs'
-" Plug 'mhinz/vim-startify'
 " Plug 'nvie/vim-flake8'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'prescrvim/nerdtree'
@@ -131,7 +129,7 @@ map <leader>a ggVG
 nnoremap <leader>n :bnext<cr>
 nnoremap <leader>p :bprevious<cr>
 nnoremap <leader>/ :Commentary<cr>
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GFiles<cr>
 map j gj
 map k gk
 nnoremap <c-q> :bdelete<cr>
