@@ -60,7 +60,7 @@ Plug 'tpope/vim-commentary'
 "     let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
 "     let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+" Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tomasr/molokai'
 Plug 'tomasiser/vim-code-dark'

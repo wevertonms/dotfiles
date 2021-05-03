@@ -122,13 +122,14 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [DirSelect Dialog]
-DirSelectDialog Size=835,604
-History Items[$e]=file:$HOME/Downloads/Programs,file:$HOME,file:$HOME/Pictures,file:$HOME/Musics,file:$HOME/Pictures,file:$HOME/Downloads/Distro Linux,file:$HOME/.local/bin,file:$HOME/Downloads/Lovecraft Country,mtp:/GM1917/Internal shared storage,file:$HOME/Pictures/elementary OS 5.1.2,file:$HOME/Musics
+DirSelectDialog Size=837,622
+History Items[$e]=file:$HOME/Desktop,file:$HOME/Musics,file:$HOME/Downloads/Programs,file:$HOME,file:$HOME/Pictures,file:$HOME/Musics,file:$HOME/Pictures,file:$HOME/Downloads/Distro Linux,file:$HOME/.local/bin,file:$HOME/Downloads/Lovecraft Country,mtp:/GM1917/Internal shared storage,file:$HOME/Pictures/elementary OS 5.1.2,file:$HOME/Musics
 
 [General]
-BrowserApplication=brave-browser.desktop
+BrowserApplication=firefox.desktop
 ColorScheme=BreezeDark
 Name=Breeze Dark
+UseSystemBell=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
 dbfile=/home/weverton/.mozilla/firefox/rqco2bie.default/places.sqlite
@@ -159,7 +160,7 @@ LocationCombo Completionmode=5
 PathCombo Completionmode=5
 Show Bookmarks=false
 Show Full Path=false
-Show Inline Previews=true
+Show Inline Previews=false
 Show Preview=false
 Show Speedbar=true
 Show hidden files=true

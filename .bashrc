@@ -146,3 +146,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 eval "$(starship init bash)"
+
+export PATH="/home/weverton/.local/bin:$PATH"

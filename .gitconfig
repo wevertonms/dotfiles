@@ -2,9 +2,6 @@
   email = wevertonms@gmail.com
   name = Weverton Marques
 
-[credential]
-  helper = store
-
 [color]
   diff   = auto
   status = auto
@@ -43,3 +40,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[init]
+	defaultBranch = main
+	templateDir = /home/weverton/.git-template

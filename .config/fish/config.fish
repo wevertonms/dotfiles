@@ -2,11 +2,12 @@ set -x PATH  ~/.local/bin/ $PATH
 set -x PATH $HOME/bin $PATH
 set -x PATH $HOME/.config/npm/bin $PATH
 set -x PATH $HOME/.gem/ruby/2.7.0/bin $PATH
-# set -x PYENV_ROOT "$HOME/.pyenv"
-# set -x PATH $PYENV_ROOT/bin $PATH
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 # set -x XDG_DATA_HOME $HOME/.local/share
 # set -x XDG_CONFIG_HOME $HOME/.config $XDG_CONFIG_HOME
 # set -x XDG_DATA_DIRS $HOME/.loca/share /usr/local/share/ /usr/share/
+# set -x XDG_DATA_DIRS $HOME/.local/share/flatpak/exports/share /var/lib/flatpak/exports/share $XDG_DATA_DIRS
 set -x EDITOR nvim
 set -x JAVA_HOME /usr/lib/jvm/default
 # set -x FZF_DEFAULT_COMMAND 'rg --files --smart-case --glob "!.git/*"'
@@ -41,7 +42,7 @@ alias pipin 'python3 -m  pip install --user -U'
 alias dnfin 'sudo dnf install -y'
 alias dnfse 'dnf search'
 alias dnfup 'sudo dnf update -y'
-
+# alias npm pnpm
 alias v nvim
 
 abbr setclip "xclip -selection c"
@@ -54,8 +55,7 @@ function mcd
 end
 
 # bass source /etc/profile
-
-if command -v pyenv 1>/dev/null 2>&1
+if command -v pyenv 1> /dev/null 2>&1
     pyenv init - | source
 end
 
@@ -74,4 +74,7 @@ if not functions -q fisher
 end
 
 # eval (direnv hook fish)
-# set -x DJANGO_SETTINGS_MODULE 'backend.settings'
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true
