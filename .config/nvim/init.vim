@@ -33,7 +33,7 @@ set spelllang=en_us,pt_br
 " set foldmethod=indent
 " set foldlevel=99
 autocmd FileType python set colorcolumn=89 " Ruler
-
+au BufNewFile,BufRead /*.rasi setf css
 
 " Install vim-plug if it is not already installed
 if empty(glob('~/.config/nvim/autoload/plug.vim'))

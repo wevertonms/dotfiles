@@ -1,27 +1,18 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/weverton/.oh-my-zsh"
-export PATH="$HOME/.local/bin:$PATH"
-export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -42,7 +33,7 @@ export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -54,6 +45,8 @@ export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -73,16 +66,13 @@ export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    fzf
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
+plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting)
+
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -111,46 +101,5 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-alias v=nvim
-alias dotfiles='/usr/bin/git --git-dir=/home/weverton/.dotfiles/ --work-tree=/home/weverton'
-alias dnfin='sudo dnf install -y'
-alias dnfse='dnf search'
-alias dnfup='sudo dnf update -y'
-alias pipin='python3 -m pip install --user -U'
-export AUTO_NOTIFY_THRESHOLD=3
-
-source ~/.profile
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/wms/.miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/wms/.miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/wms/.miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/wms/.miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-alias dnfi="sudo dnf install"
-
-_package_query() {
-    local cache="/var/cache/dnf/packages.db"
-    sqlite3 $cache "SELECT * FROM available WHERE pkg LIKE '$1%';"
-}
-
-_autocomplete_dnf() {
-    mapfile -t COMPREPLY < <(_package_query "$2");
-}
-complete -F _autocomplete_dnf dnfi
-
+#
 eval "$(starship init zsh)"

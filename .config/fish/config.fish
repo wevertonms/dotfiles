@@ -2,11 +2,12 @@ set -x PATH  ~/.local/bin/ $PATH
 set -x PATH $HOME/bin $PATH
 set -x PATH $HOME/.config/npm/bin $PATH
 set -x PATH $HOME/.gem/ruby/2.7.0/bin $PATH
-set -Ux PYENV_ROOT $HOME/.pyenv
-set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-# set -x XDG_DATA_HOME $HOME/.local/share
-# set -x XDG_CONFIG_HOME $HOME/.config $XDG_CONFIG_HOME
-# set -x XDG_DATA_DIRS $HOME/.loca/share /usr/local/share/ /usr/share/
+set -x PATH $HOME/.linuxbrew/bin $PATH
+# set -Ux PYENV_ROOT $HOME/.pyenv
+# set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+set -gx XDG_DATA_HOME $HOME/.local/share
+set -gx XDG_CONFIG_HOME $HOME/.config $XDG_CONFIG_HOME
+set -gx XDG_DATA_DIRS $HOME/.loca/share /usr/local/share/ /usr/share/
 # set -x XDG_DATA_DIRS $HOME/.local/share/flatpak/exports/share /var/lib/flatpak/exports/share $XDG_DATA_DIRS
 set -x EDITOR nvim
 set -x JAVA_HOME /usr/lib/jvm/default
@@ -55,9 +56,7 @@ function mcd
 end
 
 # bass source /etc/profile
-if command -v pyenv 1> /dev/null 2>&1
-    pyenv init - | source
-end
+pyenv init --path | source
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
